@@ -29,7 +29,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: descartesresearch/teastore-base
+          repository: jo102tz/teastore-base
           file: utilities/tools.descartes.teastore.dockerbase/Dockerfile
           path: utilities/tools.descartes.teastore.dockerbase
           tags: development
@@ -38,7 +38,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: descartesresearch/teastore-recommender
+          repository: jo102tz/teastore-recommender
           file: services/tools.descartes.teastore.recommender/Dockerfile
           path: services/tools.descartes.teastore.recommender
           tags: development
@@ -47,7 +47,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: descartesresearch/teastore-webui
+          repository: jo102tz/teastore-webui
           file: services/tools.descartes.teastore.webui/Dockerfile
           path: services/tools.descartes.teastore.webui
           tags: development
@@ -56,7 +56,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: descartesresearch/teastore-image
+          repository: jo102tz/teastore-image
           file: services/tools.descartes.teastore.image/Dockerfile
           path: services/tools.descartes.teastore.image
           tags: development
@@ -65,7 +65,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: descartesresearch/teastore-auth
+          repository: jo102tz/teastore-auth
           file: services/tools.descartes.teastore.auth/Dockerfile
           path: services/tools.descartes.teastore.auth
           tags: development
@@ -74,7 +74,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: descartesresearch/teastore-persistence
+          repository: jo102tz/teastore-persistence
           file: services/tools.descartes.teastore.persistence/Dockerfile
           path: services/tools.descartes.teastore.persistence
           tags: development
@@ -83,7 +83,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: descartesresearch/teastore-registry
+          repository: jo102tz/teastore-registry
           file: services/tools.descartes.teastore.registry/Dockerfile
           path: services/tools.descartes.teastore.registry
           tags: development
@@ -92,7 +92,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: descartesresearch/teastore-db
+          repository: jo102tz/teastore-db
           file: utilities/tools.descartes.teastore.database/Dockerfile
           path: utilities/tools.descartes.teastore.database
           tags: development
@@ -101,7 +101,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: descartesresearch/teastore-kieker-rabbitmq
+          repository: jo102tz/teastore-kieker-rabbitmq
           file: utilities/tools.descartes.teastore.kieker.rabbitmq/Dockerfile
           path: utilities/tools.descartes.teastore.kieker.rabbitmq
           tags: development
