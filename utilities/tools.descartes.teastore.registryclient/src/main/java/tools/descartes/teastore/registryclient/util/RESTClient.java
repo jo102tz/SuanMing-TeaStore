@@ -28,7 +28,7 @@ import org.glassfish.jersey.apache.connector.ApacheClientProperties;
 import org.glassfish.jersey.apache.connector.ApacheConnectorProvider;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.client.ClientProperties;
-import org.glassfish.jersey.grizzly.connector.GrizzlyConnectorProvider;
+//import org.glassfish.jersey.grizzly.connector.GrizzlyConnectorProvider;
 
 /**
  * Default Client that transfers Entities to/from a service that has a standard conforming REST-API.
