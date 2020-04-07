@@ -23,8 +23,8 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.UriBuilder;
 
-//import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
-//import org.glassfish.jersey.apache.connector.ApacheClientProperties;
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
+import org.glassfish.jersey.apache.connector.ApacheClientProperties;
 import org.glassfish.jersey.apache.connector.ApacheConnectorProvider;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.client.ClientProperties;
@@ -85,10 +85,12 @@ public class RESTClient<T> {
 		ClientConfig config = new ClientConfig();
 		config.property(ClientProperties.CONNECT_TIMEOUT, connectTimeout);
 		config.property(ClientProperties.READ_TIMEOUT, readTimeout);
-		//PoolingHttpClientConnectionManager connectionManager = new PoolingHttpClientConnectionManager();
-	    //connectionManager.setMaxTotal(MAX_POOL_SIZE);
-	    //connectionManager.setDefaultMaxPerRoute(DEFAULT_POOL_SIZE);
-	    //config.property(ApacheClientProperties.CONNECTION_MANAGER, connectionManager);
+		
+		PoolingHttpClientConnectionManager connectionManager = new PoolingHttpClientConnectionManager();
+		connectionManager.setMaxTotal(MAX_POOL_SIZE);
+		connectionManager.setDefaultMaxPerRoute(DEFAULT_POOL_SIZE);
+		config.property(ApacheClientProperties.CONNECTION_MANAGER, connectionManager);
+		
 		config.connectorProvider(new ApacheConnectorProvider());
 		//config.connectorProvider(new GrizzlyConnectorProvider());
 		client = ClientBuilder.newClient(config);
