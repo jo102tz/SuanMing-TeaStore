@@ -25,10 +25,10 @@ import javax.ws.rs.core.UriBuilder;
 
 //import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 //import org.glassfish.jersey.apache.connector.ApacheClientProperties;
-//import org.glassfish.jersey.apache.connector.ApacheConnectorProvider;
+import org.glassfish.jersey.apache.connector.ApacheConnectorProvider;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.client.ClientProperties;
-import org.glassfish.jersey.grizzly.connector.GrizzlyConnectorProvider;
+//import org.glassfish.jersey.grizzly.connector.GrizzlyConnectorProvider;
 
 /**
  * Default Client that transfers Entities to/from a service that has a standard conforming REST-API.
@@ -89,8 +89,8 @@ public class RESTClient<T> {
 	    //connectionManager.setMaxTotal(MAX_POOL_SIZE);
 	    //connectionManager.setDefaultMaxPerRoute(DEFAULT_POOL_SIZE);
 	    //config.property(ApacheClientProperties.CONNECTION_MANAGER, connectionManager);
-		//config.connectorProvider(new ApacheConnectorProvider());
-		config.connectorProvider(new GrizzlyConnectorProvider());
+		config.connectorProvider(new ApacheConnectorProvider());
+		//config.connectorProvider(new GrizzlyConnectorProvider());
 		client = ClientBuilder.newClient(config);
 		service = client.target(UriBuilder.fromUri(hostURL).build());
 		applicationURI = application;
